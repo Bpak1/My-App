@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.menu{
+
+}
+
+.menu li{
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.menu li a{
+  color: #000;
+}
+
+.background-image{
+  background-image: url(https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  background-repeat: no-repeat;
+  background-position: middle;
+  height: 60vh;
+}
