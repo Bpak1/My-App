@@ -1,0 +1,20 @@
+[
+  {
+    "id" : 1,
+    "title" : "Front end development",
+    "content" : "The last months I have studyd React at Merkle. Before that i have done some work with HTML, CSS & Javascript (jQuery). This website is build in React.",
+    "image" : "https://images.pexels.com/photos/2706654/pexels-photo-2706654.jpeg?cs=srgb&dl=astrology-astronomy-constellation-2706654.jpg&fm=jpg"
+    },
+  {
+    "id" : 2,
+    "title" : "UX Design",
+    "content" : "Before I was a front-end developer i was a  UX designer with a focus on wireframing, flowcharting & user research. My main clients where Alzheimer Nederland and Rabobank.",
+    "image" : "https://images.pexels.com/photos/33688/delicate-arch-night-stars-landscape.jpg?cs=srgb&dl=arches-national-park-astronomy-cosmos-33688.jpg&fm=jpg"
+    },
+  {
+    "id" : 3,
+    "title" : "The future",
+    "content" : "In the future I want to learn more about coding, become a Front-end developer. Beceause i believe there are much opportunities for me if i can combine my front-end and UX skills. ",
+    "image" : "https://images.pexels.com/photos/2085998/pexels-photo-2085998.jpeg?cs=srgb&dl=4k-wallpaper-astronomy-evening-2085998.jpg&fm=jpg"
+  }
+]

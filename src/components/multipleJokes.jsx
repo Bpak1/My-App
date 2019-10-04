@@ -1,60 +1,50 @@
-import React, { Component } from 'react';
+import React from "react";
+import ReactDOM from "react-dom";
 import Header from './header';
 
 
-class MultipleJokes extends Component {
+class MultipleJokes extends React.Component {
   state = {
     loading: true,
     joke: []
-  }
-  //https://github.com/15Dkatz/official_joke_api/blob/master/jokes/index.json
+  };
 
+  componentDidMount = async () => {
+    const url = "https://api.icndb.com/jokes/";
+    const response = await fetch(url);
 
-//  const [data, setData] = useState([]);
+    const data = await response.json();
 
-async componentDidMount(){
-  //const url = "https://geek-jokes.sameerkumar.website/api";
-  //const url = "https://github.com/15Dkatz/official_joke_api/blob/master/jokes/index.json";
-  const url = "http://api.icndb.com/jokes/";
-  const response = await fetch(url);
-  const data = await response.json();
-  //const result = data.value[1].joke;
-  //gebruik de map functie om meerdere resutls te krijgen  https://medium.com/javascript-in-plain-english/how-to-loop-through-arrays-in-react-3eaa8a14445
-  //console.log(result);
-  this.setState ({loading: false, joke:data});
-  //console.log("joke");
-  console.log(this.state.joke.value);
+    this.setState({ loading: false, joke: data.value });
+  };
 
-
-}
-
-
-
-  render(){
-
-    if(!this.state.joke){
-      return <div> No jokes here </div>
+  render() {
+    console.log(this.state.joke);
+    if (!this.state.joke.length) {
+      return <div> No jokes here </div>;
     }
 
-
-    return(
-        <div className="App">
-        <Header />
-        <h2> multple Jokes</h2>
-       {
-          //this.state.joke.map(data=>(
-          //  <div>
-          //  <h1> test</h1>
-          //  </div>
-          //))
-        }
-
+    return (
+      <div className="App ">
+      <Header />
+      <div className="container">
+        <div className="row">
+        <div className="col-md-12">
+          <h1>Chuck Norris Jokes</h1>
+          <ol className="jokes">
+            {this.state.joke.map(item => (
+              <li key={item.id}><p>{item.joke}</p></li>
+            ))}
+            </ol>
+            </div>
+            </div>
         </div>
-
-    //  {this.state.loading || !this.state.joke ? <div>... </div> : <div>{this.state.joke}</div>}
+      </div>
 
     );
   }
 }
+
+
 
 export default MultipleJokes;

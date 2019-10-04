@@ -1,16 +1,31 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-class Footer extends Component {
+class SiteFooter extends Component {
   render(){
     return(
-      <div className="footer mt-auto py-3">
-        <div className="container ">
-          <h1 className="display-3 ">Bart's application new</h1>
-        </div>
+
+
+      <nav className="navbar navbar-expand-md navbar-dark bg-dark mt-5  fixed-bottom">
+              <div className=" sticky-bottom py-1">
+
+              <ul className="navbar-nav  bg-dark">
+                  <li className="nav-item ">
+                    <Link to="/Index" className="nav-link">Home</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/Jokes" className="nav-link">Random joke</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/multipleJokes" className="nav-link">More jokes</Link>
+                  </li>
+
+                </ul>
       </div>
+      </nav>
     )
   }
 }
 
-export default Footer;
+export default SiteFooter;

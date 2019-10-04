@@ -30,6 +30,19 @@
   color: #fff;
 }
 
+.jokes li{
+  text-align: left;
+  padding-bottom: 10px;
+  position: relative;
+ font: bold italic 25px/1.5 Helvetica, Verdana, sans-serif;
+ margin-bottom: 20px;
+}
+
+.jokes li p {
+  font: 16px/1.5 Helvetica, sans-serif;
+  padding-left: 60px;
+  color: #555;
+}
 
 /*
 colors

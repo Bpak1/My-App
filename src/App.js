@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Index from './components/index';
 import Jokes from './components/jokes';
+import SiteFooter from './components/footer';
 import MultipleJokes from './components/multipleJokes';
 
 class App extends Component {
@@ -28,13 +29,12 @@ class App extends Component {
           </ul>
 </div>
 </nav>
+  <div className="mb-5">
           <Route path="/Index" component={Index} />
           <Route path="/Jokes" component={Jokes} />
           <Route path="/multipleJokes" component={MultipleJokes} />
-
-          <footer className="footer mt-auto py-3">
-            test
-          </footer>
+</div>
+          <SiteFooter  />
         </div>
 
       </Router>
