@@ -1,6 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Header from './header';
+
 
 
 class MultipleJokes extends React.Component {
@@ -9,11 +9,14 @@ class MultipleJokes extends React.Component {
     joke: []
   };
 
+
+
   componentDidMount = async () => {
     const url = "https://api.icndb.com/jokes/";
     const response = await fetch(url);
 
     const data = await response.json();
+    //data = convertUnicode(data);
 
     this.setState({ loading: false, joke: data.value });
   };
@@ -24,6 +27,8 @@ class MultipleJokes extends React.Component {
       return <div> No jokes here </div>;
     }
 
+
+
     return (
       <div className="App ">
       <Header />
@@ -33,7 +38,7 @@ class MultipleJokes extends React.Component {
           <h1>Chuck Norris Jokes</h1>
           <ol className="jokes">
             {this.state.joke.map(item => (
-              <li key={item.id}><p>{item.joke}</p></li>
+              <li key={item.id}><p dangerouslySetInnerHTML={{__html: item.joke}}></p></li>
             ))}
             </ol>
             </div>

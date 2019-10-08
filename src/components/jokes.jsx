@@ -12,6 +12,7 @@ class Jokes extends Component {
     //const url = "https://github.com/15Dkatz/official_joke_api/blob/master/jokes/index.json";
     const response = await fetch(url);
     const data = await response.json();
+  //  data = data.stringigy();
     //console.log(data);
 
     this.setState ({joke:data, loading: false })
@@ -23,7 +24,7 @@ class Jokes extends Component {
       <div className="App">
         <Header />
         <h1>Random Joke</h1>
-        {this.state.loading || !this.state.joke ? <div>... </div> : <div>{this.state.joke}</div>}
+        {this.state.loading || !this.state.joke ? <div>... </div> : <div> <p dangerouslySetInnerHTML={{__html: this.state.joke}}></p></div>}
       </div>
     );
   }

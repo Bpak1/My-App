@@ -4,7 +4,7 @@ import Projects from '../data/projects.json';
 class ProjectsClass extends Component {
   render(){
     return(
-      <div className="row ml-3 mr-3">
+      <div className="row ml-3 mr-3 mb-1">
       {
         Projects.map((Projects, index) =>{
           return(

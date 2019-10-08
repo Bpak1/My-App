@@ -12,13 +12,13 @@ class SiteFooter extends Component {
 
               <ul className="navbar-nav  bg-dark">
                   <li className="nav-item ">
-                    <Link to="/Index" className="nav-link">Home</Link>
+                    <Link to="/" className="nav-link">Home</Link>
                   </li>
                   <li className="nav-item">
                     <Link to="/Jokes" className="nav-link">Random joke</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/multipleJokes" className="nav-link">More jokes</Link>
+                    <Link to="/Index" className="nav-link">About me</Link>
                   </li>
 
                 </ul>
